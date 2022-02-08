@@ -1,0 +1,37 @@
+.table-container{
+    margin-top: 5%;
+    margin-left: 18%;
+  
+}
+.content-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.5cm;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+.content-table thead tr{
+    background-color: #bdcaef;
+    text-align: center;
+    font-weight: bold;
+    color: #101c42;
+    font-family: 'Anton', sans-serif;
+}
+.content-table th,.content-table td{
+    padding: 13px 16px;
+
+}
+.content-table tbody tr{
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+}
+.content-table tbody tr:nth-of-type(even){
+    background-color: #eff2fb;
+   
+   color:#101c42 ;
+}
+.content-table tbody tr:last-of-type{
+   border-bottom: 2px solid #bdcaef;
+}

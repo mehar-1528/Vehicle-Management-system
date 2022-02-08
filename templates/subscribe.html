@@ -1,0 +1,39 @@
+<!-- home.html -->
+{% load static%}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Subscribe</title>
+</head>
+<style>
+    body{
+        /* background-color: #70ddd9; */
+        background-image:linear-gradient(rgba(255, 255, 255, 0.507), rgba(255, 255, 255, 0.548)), url( "{% static 'car3.jpg' %}");
+        background-position: top;
+        background-size: 1560px 725px;
+        background-attachment: fixed;
+        
+       
+        
+    }
+</style>
+<body>
+<main>
+    <h1>Send Notification Email</h1>
+    {% if messages %}
+        {% for message in messages %}
+            <p style="color: red">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+    <form action="{% url 'subscribe' %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Send mail">
+    </form>
+</main>
+</body>
+</html>
